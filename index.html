@@ -32,8 +32,7 @@
     <div class="container mt-4">
         <div class="text-center">
             <h3 class="fw-bold">ANALISIS DE CAUSA RAIZ BASICO</h3>
-            <h5 class="encabezado-pequeño mt-4"></h5>
-            <h6 class="encabezado-pequeño">SELECCIONE LAS CATEGORIAS DE LOS NUMEROS PARA INGRESAR DENTRO DEL SMI (SISTEMA DE MANEJO DE INCIDENTES)</h6>
+            <h4 class="encabezado-pequeño">SELECCIONE LAS CATEGORIAS DE LOS NUMEROS PARA INGRESAR DENTRO DEL SMI (SISTEMA DE MANEJO DE INCIDENTES)</h6>
             <hr>
         </div>
     </div>
@@ -41,7 +40,7 @@
     <style>
         .grid{
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(3,1fr);
             gap: 8px;
         }
     </style>
@@ -56,7 +55,7 @@
     </style>    
 
     <div class="container mt-4">
-        <div class="fw-bold">LESIONES</div>
+        <div class="fw-bold" style="background-color: rgba(84, 84, 84, 0.945); color: white;padding: 10px;">LESIONES</div>
         <div class="fw-bold">1. PARTES DEL CUERPO</div>
         <div id="grid" class="grid" role="list">
         <!-- Elementos de ejemplo. Puedes generar estos desde JS dinámicamente si lo prefieres -->
@@ -92,6 +91,7 @@
         <div class="item" data-label="Opción 30"><input type="checkbox" id="i30" value="Opción 30"><label for="i30">1.30 Sistemico</label></div>
         </div>
     
+    <div class="row mt-4">
     <div class="fw-bold">2. NATURALEZA DE LA LESIÓN</div>
     <div id="grid" class="grid" role="list">
         <!-- Elementos de ejemplo. Puedes generar estos desde JS dinámicamente si lo prefieres -->
@@ -126,12 +126,14 @@
         <div class="item" data-label="Opción 59"><input type="checkbox" id="i59" value="Opción 59"><label for="i59">2.29 Asfixia</label></div>
         <div class="item" data-label="Opción 60"><input type="checkbox" id="i60" value="Opción 60"><label for="i60">2.30 Herida</label></div>
         </div>
+        </div>
 
-        <div class="fw-bold">CONTACTO</div>
         <div class="row mt-4">
+        <div class="fw-bold" style="background-color: rgba(84, 84, 84, 0.945); color: white;padding: 10px;">CONTACTO</div>
         <div class="col-md-6">
         <div class="fw-bold">3. AGENCIA INVOLUCRADA (Seleccion unica)</div>
         <select class="form-select" name="Agencia" id="select.form-select">
+            <option value="FT">-- Selecciona una Agencia Involucrada--</option>
             <option value="A1">3.1 Avión/Barco</option>
             <option value="A2">3.2 Animal/Fauna</option>
             <option value="A3">3.3 Caldera y Navío a Presión</option>
@@ -167,6 +169,7 @@
         <div class="col-md-6">
         <div class="fw-bold">4. MECANISMO DE LESIÓN (selección unica)</div>
         <select class="form-select" name="mecanismo" id="select.form-select">
+            <option value="B">-- Selecciona un Mecanismo de Lesión--</option>
             <option value="B1">4.1 Agravante</option>
             <option value="B2">4.2 Mordedura/Picadura</option>
             <option value="B3">4.3 Explosión</option>
@@ -179,7 +182,7 @@
             <option value="B10">4.10 Caída desde altura (a un nivel más bajo).</option>
             <option value="B11">4.11 Caída del mismo nivel (Resbalón y caída, tropezón).</option>
             <option value="B12">4.12 Cuerpo extraño en ojo (polvo, esquirla, partícula, etc.).</option>
-            <option value="A13">4.13 Inhalación, Absorción, Atragantamiento.</option>
+            <option value="B13">4.13 Inhalación, Absorción, Atragantamiento.</option>
             <option value="B14">4.14 Levantar, Tirar, Empujar.</option>
             <option value="B15">4.15 Sobre esfuerzo/ Tensión (Sobrecarga, Sobre exposición).</option>
             <option value="B16">4.16 Roce o Desgaste.</option>
@@ -191,11 +194,12 @@
         </div>
         </div>
 
-        <div class="fw-bold">CAUSAS INMEDIATAS</div>
         <div class="row mt-4">
+        <div class="fw-bold" style="background-color: rgba(84, 84, 84, 0.945); color: white;padding: 10px;">CAUSAS INMEDIATAS</div>
         <div class="col-md-6">
         <div class="fw-bold">5. PRÁCTICAS SUB-ESTÁNDAR (selección unica)</div>
         <select class="form-select" name="practica" id="select.form-select">
+            <option value="C">-- Selecciona una Práctica Sub-Estándar--</option>
             <option value="C1">5.1 Falla en seguir la regla o el procedimiento</option>
             <option value="C2">5.2 Inadecuada Inspección del área de trabajo</option>
             <option value="C3">5.3 Inadecuada inspección pre-operativa</option>
@@ -220,8 +224,9 @@
         </div>
 
         <div class="col-md-6">
-        <div class="fw-bold">CONDICIONES SUB-ESTÁNDAR (selección unica)</div>
+        <div class="fw-bold">6. CONDICIONES SUB-ESTÁNDAR (selección unica)</div>
         <select class="form-select" name="condicion" id="select.form-select">
+            <option value="D">-- Selecciona una Condición Sub-Estándar--</option>
             <option value="D1">6.1 Guardias o barreras inadecuadas</option>
             <option value="D2">6.2 Elemento de protección inadecuado o inapropiado</option>
             <option value="D3">6.3 Instrumentos, equipos o materiales Defectuosos</option>
@@ -238,4 +243,297 @@
         </select>
         </div>
         </div>
-</div>
+    
+        <div class="row mt-4">
+                    <div class="fw-bold" style="background-color: rgba(84, 84, 84, 0.945); color: white;padding: 10px;">CAUSA RAÍZ/BASICA</div>
+                    <div class="fw-bold">7. FACTOR PERSONAL (escoja UNA o no más de DOS)</div>
+                    <div class="col-md-6">
+                    <div class="mb-3">
+                        <select class="form-select" id="opcionfp1" name="opcionfp1">
+                            <option value="FP">-- Selecciona un factor de Trabajo (opción 01)--</option>
+                            <option value="FP-01">7.1 CAPACIDAD FÍSICA/FISIOLÓGICA INADECUADA</option>
+                            <option value="FP-02">7.2 CAPACIDAD MENTAL/PSICOLÓGICA DEFICIENTE</option>
+                            <option value="FP-03">7.3 ESTRÉS FÍSICO O FISIOLÓGICO</option>
+                            <option value="FP-04">7.4 ESTRÉS MENTAL O PSICOLÓGICO</option>
+                            <option value="FP-05">7.5 FALTA DE CONOCIMIENTO</option>
+                            <option value="FP-06">7.6 FALTA DE APTITUDES</option>
+                            <option value="FP-07">7.7 MOTIVACIÓN INCORRECTA</option>
+                        </select>
+                    </div>
+                    </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <select class="form-select" id="opcionfp2" name="opcionfp2">
+                            <option value="FP">-- Selecciona un factor de Trabajo (opción 02)--</option>
+                            <option value="FP-01">7.1 CAPACIDAD FÍSICA/FISIOLÓGICA INADECUADA</option>
+                            <option value="FP-02">7.2 CAPACIDAD MENTAL/PSICOLÓGICA DEFICIENTE</option>
+                            <option value="FP-03">7.3 ESTRÉS FÍSICO O FISIOLÓGICO</option>
+                            <option value="FP-04">7.4 ESTRÉS MENTAL O PSICOLÓGICO</option>
+                            <option value="FP-05">7.5 FALTA DE CONOCIMIENTO</option>
+                            <option value="FP-06">7.6 FALTA DE APTITUDES</option>
+                            <option value="FP-07">7.7 MOTIVACIÓN INCORRECTA</option>
+                        </select>
+                    </div>
+                    </div>
+
+                <div class="col-md-6">
+                <div class="mb-3">
+                    <label class="fw-bold">Seleccione el Subgrupo</label>
+                    <select class="form-select" id="subgrupofp1">
+                        <option value="">-- Seleccione la opción 01 --</option>
+                    </select>
+                </div>
+                </div>
+
+                <div class="col-md-6">
+                <div class="mb-3">
+                    <label class="fw-bold">Seleccione el Subgrupo</label>
+                    <select class="form-select" id="subgrupofp2">
+                        <option value="">-- Seleccione la opción 02 --</option>
+                    </select>
+                </div>
+                </div>
+                </div>
+
+                <script>
+                    const subgrupofpData = {
+                                    "FP-01":["7.1.1 Inadecuados: altura, peso, tamaño, fuerza, etc.","7.1.2 Rango limitado del movimiento del cuerpo.","7.1.3 Capacidad limitada para sostener la posición del cuerpo.","7.1.4 Limitación o incompatibilidad con la tarea asignado (incapacidad permanente).","7.1.5 Limitación o incompatibilidad con la tarea asignada (incapacidad temporal).","7.1.6 Intolerancia a sustancias o alergias.","7.1.7 Sensibilidad frente a extremas sensoriales (temperatura, sonidos, etc.).","7.1.8 Visión deficiente.","7.1.9 Deficiencia auditiva.","7.1.10 Otro Sentido (tacto, gusto, olfato, equilibrio).","7.1.11 Incapacidad Respiratoria.","7.1.12 Otras incapacidades permanentes.","7.1.13 Incapacidades Temporales."], 
+                                    "FP-02":["7.2.1 Limitación o incompatibilidad con el trabajo asignado(discapacidad permanente).","7.2.2 Limitación o incompatibilidad con el trabajo asignado(discapacidad temporal).","7.2.3 Miedos y Fobias.","7.2.4 Alteración Emocional.","7.2.5 Enfermedad Mental.","7.2.6 Nivel de Inteligencia.","7.2.7 Incapacidad para comprender.","7.2.8 Falta de Criterio.","7.2.9 Mala de Coordinación.","7.2.10 Demora en tiempo de reacción.","7.2.11 Poca habilidad mecánica.","7.2.12 Poca habilidad de aprendizaje.","7.2.13 Falla la Memoria.","7.2.14 Inadecuada Capacitación Inicial."],
+                                    "FP-03":["7.3.1 Lesión o enfermedad.","7.3.2 Fatiga por carga laboral o duración de la tarea.","7.3.3 Fatiga debido a falta de descanso.","7.3.4 Fatiga debido a sobrecarga sensorial.","7.3.5 Exposición a peligros para la salud.","7.3.6 Exposición a temperaturas extremas.","7.3.7 Falta de oxígeno.","7.3.8 Variación de presión atmosférica.","7.3.9 Movimientos forzados.","7.3.10 Baja Glicemia.","7.3.11 Drogas, medicamentos.","7.3.12 Condición médica/ medicación no relacionada al trabajo."],
+                                    "FP-04":["7.4.1 Sobrecarga emocional.","7.4.2 Fatiga debido a la presión o urgencia del trabajo.","7.4.3 Criterio extremo / exigencia de decisiones.","7.4.4 Rutina, monotonía, que se exige para la vigilancia sin incidentes.","7.4.5 Exigencias de concentración / percepción extremas.","7.4.6 Actividades “sin sentido” o “corruptas”.","7.4.7 Instrucciones Confusas.","7.4.8 Exigencias contradictorias."],
+                                    "FP-05":["7.5.1 Falta de experiencia.","7.5.2 Orientación inadecuada.","7.5.3 Capacitación inicial insuficiente.","7.5.4 Actualización de la capacitación inapropiada.","7.5.5 Instrucciones mal comprendidas."],
+                                    "FP-06":["7.6.1 Instrucción inicial insuficiente.","7.6.2 Desempeño inadecuado.","7.6.3 Práctica poco frecuente.","7.6.4 Falta de entrenamiento."],
+                                    "FP-07":["7.7.1 Se recompensa la práctica impropia.","7.7.2 Se castiga la práctica correcta.","7.7.3 Falta de incentivos.","7.7.4 Frustración excesiva.","7.7.5 Agresión Inaceptable.","7.7.6 Intento fallido para ahorrar tiempo o esfuerzo.","7.7.7 Intento inapropiado para llamar la atención.","7.7.8 Presión inaceptable de los pares.","7.7.9 Ejemplo de liderazgo inapropiado.","7.7.10 Práctica de retroalimentación inadecuada.","7.7.11 Refuerzo inadecuado de la práctica correcta.","7.7.12 Incentivos de producción inapropiados."],
+                                };
+
+                        function cargarSubgrupofp(origenSelect, destinoSelectId) {
+
+                            const valor = origenSelect.value;
+                            const destino = document.getElementById(destinoSelectId);
+
+                            destino.innerHTML = `<option value="">-- Seleccione una opción --</option>`;
+
+                            if (subgrupofpData[valor]) {
+                                subgrupofpData[valor].forEach(txt => {
+                                    const opt = document.createElement("option");
+                                    opt.value = txt;
+                                    opt.textContent = txt;
+                                    destino.appendChild(opt);
+                                });
+                            }
+                        }
+
+                        // ⭐ Si cambia Opción 1 → llena Subgrupo 1
+                        document.getElementById("opcionfp1").addEventListener("change", function () {
+                            cargarSubgrupofp(this, "subgrupofp1");
+                        });
+                        document.getElementById("opcionfp2").addEventListener("change", function () {
+                            cargarSubgrupofp(this, "subgrupofp2");
+                        });
+
+                </script>
+
+
+        <div class="row mt-4">
+            <div class="fw-bold">8. FACTORES DE TRABAJO (escoja UNA o no más de DOS)</div>
+            <div class="col-md-6">
+            <div class="mb-3">
+                <select class="form-select" id="opcion1" name="opcion1">
+                    <option value="FT">-- Selecciona un factor de Trabajo (opción 01)--</option>
+                    <option value="FT-01">8.1 LIDERAZGO Y/O SUPERVISIÓN INADECUADO</option>
+                    <option value="FT-02">8.2 INGENIERÍA INADECUADA</option>
+                    <option value="FT-03">8.3 COMPRAS INCORRECTAS</option>
+                    <option value="FT-04">8.4 MANTENCIÓN INADECUADA</option>
+                    <option value="FT-05">8.5 HERRAMIENTAS Y EQUIPOS INADECUADOS</option>
+                    <option value="FT-06">8.6 ESTÁNDARES DE TRABAJO INADECUADOS</option>
+                    <option value="FT-07">8.7 DESGASTE</option>
+                    <option value="FT-08">8.8 ABUSO OR MAL USO</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="mb-3">
+                <select class="form-select" id="opcion2" name="opcion2">
+                    <option value="FT">-- Selecciona un factor de Trabajo (opción 02)--</option>
+                    <option value="FT-01">8.1 LIDERAZGO Y/O SUPERVISIÓN INADECUADO</option>
+                    <option value="FT-02">8.2 INGENIERÍA INADECUADA</option>
+                    <option value="FT-03">8.3 COMPRAS INCORRECTAS</option>
+                    <option value="FT-04">8.4 MANTENCIÓN INADECUADA</option>
+                    <option value="FT-05">8.5 HERRAMIENTAS Y EQUIPOS INADECUADOS</option>
+                    <option value="FT-06">8.6 ESTÁNDARES DE TRABAJO INADECUADOS</option>
+                    <option value="FT-07">8.7 DESGASTE</option>
+                    <option value="FT-08">8.8 ABUSO OR MAL USO</option>
+                </select>
+            </div>
+            </div>
+
+        <div class="col-md-6">
+        <div class="mb-3">
+            <label class="fw-bold">Seleccione el Subgrupo</label>
+            <select class="form-select" id="subgrupo1">
+                <option value="">-- Seleccione la opción 01 --</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="col-md-6">
+        <div class="mb-3">
+            <label class="fw-bold">Seleccione el Subgrupo</label>
+            <select class="form-select" id="subgrupo2">
+                <option value="">-- Seleccione la opción 02 --</option>
+            </select>
+        </div>
+        </div>
+        </div>
+
+        <script>
+            const subgrupoData = {
+                            "FT-01":["8.1.1 Relación del informe poco claro o contradictorio.","8.1.2 Asignación de la responsabilidad poco clara o confusa.","8.1.3 Delegación inapropiada o insuficiente.","8.1.4 Dar políticas, procedimientos, prácticas o instrucciones inapropiadas.","8.1.5 Programación o planificación inadecuadas del trabajo.","8.1.6 Instrucciones, orientación o capacitación Incorrectas.","8.1.7 Dar inadecuada referencia de documentos, directrices y publicación de las instrucciones.","8.1.8 Inadecuada identificación y evaluación de la exposición a pérdidas.","8.1.9 Falta de conocimiento del trabajo de gerencia/líder.","8.1.10 Los requisitos personales y los requerimientos del trabajo no coinciden.","8.1.11 Inadecuadas evaluación y medición del desempeño.","8.1.12 Práctica de retroalimentación inadecuada o incorrecta"], 
+                            "FT-02":["8.2.1 Inadecuada evaluación de la exposición a pérdida.","8.2.2 Consideración inadecuada de factores humanos/ergonómicos.","8.2.3 Estándares, especificaciones y/o criterio de diseño inadecuados.","8.2.4 Monitoreo inadecuado de la construcción.","8.2.5 Evaluación inadecuada de la preparación operacional.","8.2.6 Monitoreo inadecuado de la operación inicial.","8.2.7 Evaluación inadecuada de los cambios."],
+                            "FT-03":["8.3.1 Especificaciones de la solicitud de compra incorrectas","8.3.2 Investigación incorrecta de los materiales/equipos.","8.3.3 Estándares Inadecuados en las especificaciones a vendedores","8.3.4 Medio o ruta de aceptación Inadecuados","8.3.5 Inspección de recepción y aceptación inadecuadas.","8.3.6 Comunicación de la información de salud y seguridad inadecuada.","8.3.7 Manipulación incorrecta de materiales.","8.3.8 Transporte inadecuado de materiales.","8.3.9 Identificación incorrecta de situaciones peligrosas.","8.3.10 Eliminación y/o recuperación de residuos."],
+                            "FT-04":["8.4.1 Prevención inadecuada - evaluación de las necesidades.","8.4.2 Prevención inadecuada - lubricación y servicio.","8.4.3 Prevención inadecuada - ajuste/ensamble.","8.4.4 Prevención inadecuada - limpieza o emparejar superficie.","8.4.5 Restauración inadecuada - comunicación de las necesidades.","8.4.6 Restauración inadecuada - Programación del trabajo.","8.4.7 Reparación inadecuada - inspección de unidades.","8.4.8 Reparación inadecuada- cambio de piezas"],
+                            "FT-05":["8.5.1 Evaluación de las necesidades y riesgos.", "8.5.2 Consideraciones ergonómicas/factor humanoinadecuadas.", "8.5.3 Especificaciones o estándares inadecuados.", "8.5.4 Disponibilidad inadecuada.", "8.5.5 Mantención/reparación/ajuste inadecuados.", "8.5.6 Recuperación y mejoramiento Inadecuados.", "8.5.7 Cambio y reemplazo de ítems incorrectos."],
+                            "FT-06":["8.6.1 Inventario y evaluación inadecuados de las exposiciones y necesidades (Desarrollo Inadecuado).", "8.6.2 Inadecuada coordinación con el diseño del proceso (Desarrollo Inadecuado).","8.6.3 Participación inapropiada del empleado (Desarrollo Inadecuado).", "8.6.4 Estándares/ procedimientos/ reglas inadecuadas (Desarrollo Inadecuado). ", "8.6.5 Publicación Incorrecta (Comunicación Inadecuado).","8.6.6 Distribución Incorrecta (Comunicación Inadecuado).", "8.6.7 Traducción incorrecta al idioma apropiado (Comunicación Inadecuado). ", "8.6.8 Inadecuado rastreo del circuito de producción (Mantención Inadecuado).", "8.6.9 Actualización inadecuada (Mantención Inadecuado).", "8.6.10 Inadecuado uso del monitoreo de estándares/procedimientos/reglas(Mantención Inadecuado)."],
+                            "FT-07":["8.7.1 Inadecuada planificación del uso.","8.7.2 Extensión incorrecta de la vida de uso.","8.7.3 Inspección y monitoreo inadecuados.","8.7.4 Carga inapropiada de la tasa de uso.","8.7.5 Mantención inadecuada.","8.7.6 Uso por personal no calificado o sin entrenamiento.","8.7.7 Uso con propósito incorrecto"],
+                            "FT-08":["8.8.1 Tolerado por la supervisión - intencional.","8.8.2 Tolerado por la supervisión - sin intención.","8.8.3 No tolerado por la supervisión - intencional.","8.8.4 No tolerado por la supervisión - sin intención"]
+                        };
+
+                function cargarSubgrupo(origenSelect, destinoSelectId) {
+
+                    const valor = origenSelect.value;
+                    const destino = document.getElementById(destinoSelectId);
+
+                    destino.innerHTML = `<option value="">-- Seleccione una opción --</option>`;
+
+                    if (subgrupoData[valor]) {
+                        subgrupoData[valor].forEach(txt => {
+                            const opt = document.createElement("option");
+                            opt.value = txt;
+                            opt.textContent = txt;
+                            destino.appendChild(opt);
+                        });
+                    }
+                }
+
+                // ⭐ Si cambia Opción 1 → llena Subgrupo 1
+                document.getElementById("opcion1").addEventListener("change", function () {
+                    cargarSubgrupo(this, "subgrupo1");
+                });
+                document.getElementById("opcion2").addEventListener("change", function () {
+                    cargarSubgrupo(this, "subgrupo2");
+                });
+        </script>
+
+        <div class="row mt-4">
+                    <div class="fw-bold" style="background-color: rgba(84, 84, 84, 0.945); color: white;padding: 10px;">MANAGMENT CONTROL</div>
+                    <div class="fw-bold">9. CONTROL DE LA GERENCIA (SISTEMAS, ESTÁNDARES, CONFORMIDAD) Para cada causa de raíz/básica identificada, refiérase al sistema de administración de más abajo para ayudarle a determinar la acción correctiva para eliminar y/o mejorar el Control de la Gerencia</div>
+                    <div class="col-md-6">
+                    <div class="mb-3">
+                        <select class="form-select" id="opcioncg1" name="opcioncg1">
+                            <option value="CG">-- Selecciona un control de gerencia (opción 01)--</option>
+                            <option value="CG-01">9.1 DESARROLLO DEL EMPLEADO</option>
+                            <option value="CG-02">9.2 ACCOUNTABILITY DEL EMPLEADO</option>
+                            <option value="CG-03">9.3 MANEJO DE RIESGO/CAMBIO</option>
+                            <option value="CG-04">9.4 COMUNICACIONES</option>
+                            <option value="CG-05">9.5 INSPECCIONES/AUDITORÍAS</option>
+                            <option value="CG-06">9.6 PREPARACIÓN DE LA EMERGENCIA</option>
+                            <option value="CG-07">9.7 POLÍTICAS/INSTRUCCIONES /Análisis de Riesgo Operacional/ Procedimientos Estándar/ Instrucciones del Trabajo.</option>
+                            <option value="CG-08">9.8 MANEJO DE MATERIALES DE LOS CONTRATISTAS</option>
+                            <option value="CG-09">9.9 INGENIERÍA/DISEÑO</option>
+                            <option value="CG-10">9.10 OPERACIONES Y MANTENCIÓN</option>
+                            <option value="CG-11">9.11 SALUD OCUPACIONAL</option>
+                            <option value="CG-12">9.12 ERGONOMÍA</option>
+                            <option value="CG-13">9.13 RECURSOS HUMANOS</option>
+                            <option value="CG-14">9.14 MEDIOAMBIENTE</option>
+                        </select>
+                    </div>
+                    </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <select class="form-select" id="opcioncg2" name="opcioncg2">
+                            <option value="CG">-- Selecciona un control de gerencia (opción 02)--</option>
+                            <option value="CG-01">9.1 DESARROLLO DEL EMPLEADO</option>
+                            <option value="CG-02">9.2 ACCOUNTABILITY DEL EMPLEADO</option>
+                            <option value="CG-03">9.3 MANEJO DE RIESGO/CAMBIO</option>
+                            <option value="CG-04">9.4 COMUNICACIONES</option>
+                            <option value="CG-05">9.5 INSPECCIONES/AUDITORÍAS</option>
+                            <option value="CG-06">9.6 PREPARACIÓN DE LA EMERGENCIA</option>
+                            <option value="CG-07">9.7 POLÍTICAS/INSTRUCCIONES /Análisis de Riesgo Operacional/ Procedimientos Estándar/ Instrucciones del Trabajo.</option>
+                            <option value="CG-08">9.8 MANEJO DE MATERIALES DE LOS CONTRATISTAS</option>
+                            <option value="CG-09">9.9 INGENIERÍA/DISEÑO</option>
+                            <option value="CG-10">9.10 OPERACIONES Y MANTENCIÓN</option>
+                            <option value="CG-11">9.11 SALUD OCUPACIONAL</option>
+                            <option value="CG-12">9.12 ERGONOMÍA</option>
+                            <option value="CG-13">9.13 RECURSOS HUMANOS</option>
+                            <option value="CG-14">9.14 MEDIOAMBIENTE</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="fw-bold">Seleccione el Subgrupo</label>
+                        <select class="form-select" id="subgrupocg1">
+                            <option value="">-- Seleccione la opción 01 --</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="fw-bold">Seleccione el Subgrupo</label>
+                        <select class="form-select" id="subgrupocg2">
+                            <option value="">-- Seleccione la opción 02 --</option>
+                        </select>
+                    </div>
+                    </div>
+        </div>
+        
+        <script>
+            const subgrupocgData = {
+                            "CG-01":["9.1.1 Necesidades de capacitación analizadas regularmente.","9.1.2 Materiales de capacitación desarrollados/formalizados","9.1.3 Capacitación entregada a los nuevos empleados.","9.1.4 Capacitación actualizada regularmente.","9.1.5 Repaso de la Capacitación","9.1.6 Registros de Capacitación Mantenidos","9.1.7 Requisitos del Instructor.","9.1.8 Evaluaciones de competencias dirigidas.","9.1.9 Efectividad de la Capacitación medida/monitoreada."],
+                            "CG-02":["9.2.1 Sistema Accountability establecido/formal.","9.2.2 Roles/expectativas para todos los tipos de trabajo.","9.2.3 Sistemas de Medición de Accountability.","9.2.4 Evaluaciones de Accountability regularmente dirigidas.","9.2.5 Accountability en lugar del desempeño positivo/negativo."],
+                            "CG-03":["9.3.1 Riesgos identificados.","9.3.2 Riesgos analizados y tasados.","9.3.3 Controles de riesgo identificados.","9.3.4 Plan de acción de riesgo.","9.3.5 Mitigación de riesgos (Tan bajo como razonablemente sea practicable)","9.3.6 Sistema de medición / monitoreo de riesgo.","9.3.7 Cambio en el manejo del sistema de identificación.","9.3.8 Cambio en el manejo del proceso de identificación.","9.3.9 Cambio en el manejo del proceso de comunicación","9.3.10 Riesgo/cambio en el manejo de la participación del empleado."],
+                            "CG-04":["9.4.1 Comunicación para toda la audiencia.","9.4.2 Conducto regular de las comunicaciones.","9.4.3 Instrucciones de las tareas.","9.4.4 Contactos Personales.","9.4.5 Reuniones del grupo de empleados.","9.4.6 Auditada para la efectividad/puntualidad."],
+                            "CG-05":["9.5.1 Proceso de inspección general planeado.","9.5.2 Proceso de inspección del lugar de trabajo.","9.5.3 Proceso de inspección del equipo.","9.5.4 Proceso de observación del trabajo/tarea.","9.5.5 Participación de la Gerencia.","9.5.6 Participación del empleado.","9.5.7 Proceso de seguimiento de la acción correctiva.","9.5.8 Efectividad medida/monitoreada.","9.5.9 Evaluación para las prácticas y condiciones."],
+                            "CG-06":["9.6.1 Roles administrativos establecidos.","9.6.2 Identificación de potenciales emergencias.","9.6.3 Planes de emergencia escritos.","9.6.4 Información de contacto para emergencia.","9.6.5 Grupos de emergencia capacitados.","9.6.6 Disponibilidad de equipos de emergencia.","9.6.7 Coordinación con agencias externas.","9.6.8 Evacuación de perforadoras/Emergencia","9.6.9 Entrenamiento de emergencia del empleado"],
+                            "CG-07":["9.7.1 Desarrollados para trabajo/ tareas.","9.7.2 Disponible a los empleados.","9.7.3 Revisado como parte del trabajo de capacitación.","9.7.4 Revisado antes de comenzar el trabajo/tarea.","9.7.5 Chequeado / revisado regularmente."],
+                            "CG-08":["9.8.1 Políticas/procedimientos establecidos por escrito.","9.8.2 Obtención de bienes y servicios considera revisiones de seguridad.","9.8.3 Revisión de Salud y Seguridad en la selección del contratista.","9.8.4 Manejo presencial de los Contratistas. ","9.8.5 Revisión de Salud y Seguridad de los servicios entrantes.","9.8.6 Capacitación de Salud y Seguridad de los Contratistas.","9.8.7 Sistema/capacitación para la Planilla de información Materiales de Seguridad."],
+                            "CG-09":["9.9.1 Normas / códigos seguidos.","9.9.2 Identificación dirigida del peligro/riesgo.","9.9.3 Revisión de los proyectos de Salud y Seguridad.","9.9.4 Análisis dirigido de Salud y Seguridad.","9.9.5 Control de los procesos operacionales / de trabajo."],
+                            "CG-10":["9.10.1 Sistema de mantención preventivo en el lugar.","9.10.2 Identificación / revisión de las partes/procesos críticos.","9.10.3 Proceso de puesta en marcha del equipo en el lugar.","9.10.4 Sistema de pedido de trabajo en el lugar."],
+                            "CG-11":["9.11.1 Controles / evaluación / identificación del peligro en el lugar.","9.11.2 Monitoreo de HI en el lugar y dirigido.","9.11.3 Información y capacitación en el lugar.","9.11.4 Supervisión médica dirigida.","9.11.5 Guardar los registros rastreados y mantenidos."],
+                            "CG-12":["9.12.1 Equipo ergonómico diseñado en el lugar.","9.12.2 Revisiones ergonómicas dirigidas.","9.12.3 Instrucción ergonómica entregada.","9.12.4 Factores de fatiga identificados.","9.12.5 Capacitación impartida del conocimiento de la fatiga."],
+                            "CG-13":["9.13.1 Requisitos evaluados y establecidos de capacidad de trabajo.","9.13.2 Examen de precolocación realizado.","9.13.3 Análisis completo de aptitudes de las nuevas contrataciones.","9.13.4 Capacitación / inducción general dirigidas.","9.13.5 Chequeos pre-ocupacionales realizados para calificar.","9.13.6 Sistemas de asesoría en el lugar."],
+                            "CG-14":["9.14.1 Controles/ informes de derrames en el lugar"]
+                        };
+
+                function cargarSubgrupocg(origenSelect, destinoSelectId) {
+
+                    const valor = origenSelect.value;
+                    const destino = document.getElementById(destinoSelectId);
+
+                    destino.innerHTML = `<option value="">-- Seleccione una opción --</option>`;
+
+                    if (subgrupocgData[valor]) {
+                        subgrupocgData[valor].forEach(txt => {
+                            const opt = document.createElement("option");
+                            opt.value = txt;
+                            opt.textContent = txt;
+                            destino.appendChild(opt);
+                        });
+                    }
+                }
+
+                // ⭐ Si cambia Opción 1 → llena Subgrupo 1
+                document.getElementById("opcioncg1").addEventListener("change", function () {
+                    cargarSubgrupocg(this, "subgrupocg1");
+                });
+                document.getElementById("opcioncg2").addEventListener("change", function () {
+                    cargarSubgrupocg(this, "subgrupocg2");
+                });
+        </script>
+
+
+</body>
